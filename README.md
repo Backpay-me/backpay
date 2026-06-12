@@ -88,8 +88,9 @@ A payload that tried to carry your prompt has nowhere to put it.
 > iii. **No one is ever the product alone.** No data cell covering fewer than five members
 > is published or sold. Individual rows: never, at any price.
 >
-> iv. **The ledger is public from day zero.** Half of every euro, pro-rata by days
-> contributed — or this is just another harvester with better fonts.
+> iv. **The ledger is open — the pool is on-chain.** Half of every euro back, pro-rata by
+> days, routed to a public Bitcoin address you can audit. €0.00 today, honestly — or this
+> is just another harvester with better fonts.
 >
 > v. **Paid in money nobody can freeze.** Default payout rail: Bitcoin Lightning.
 
@@ -123,6 +124,9 @@ minting many identities). The gate sits at *payout*, not accrual: **GitHub OAuth
 aged real account most devs already have) + account-age heuristics + per-identity caps —
 accrue-cheap, pay-strict. None of it is built until a buyer check is in sight.
 
+**Where this is headed:** Backpay is built to become a **member-owned cooperative with
+audit rights** — accountability by structure, not "trust us."
+
 ## FAQ
 
 **Isn't this spyware with extra steps?**
@@ -137,12 +141,6 @@ that pays you. Different layer.
 **Who actually buys this?**
 The same people who pay for spend-side indexes today. Spend tells you who paid; usage
 tells you who *stayed*. That retention layer is currently unclaimed.
-
-**Doesn't OpenRouter already publish usage data?**
-OpenRouter ranks *models* through its own gateway — but Claude Code, Cursor and Copilot call
-their providers directly and never touch it, so it can't see the *tool* war. Backpay measures
-tools from each dev's local logs, across every tool, plus the switching and churn no single
-gateway can. Different layer — and OpenRouter pays the devs nothing.
 
 **50% of zero is zero.**
 Correct — today the ledger reads €0.00 and the homepage says so. The data union exists before
