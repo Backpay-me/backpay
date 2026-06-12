@@ -244,6 +244,14 @@ async function init() {
   const days = payloads.length;
   const totalCost = payloads.reduce((a, p) => a + p.entries.reduce((b, e) => b + e.cost_usd_est, 0), 0);
   console.error(`  Found ${days} day(s) — est. $${totalCost.toFixed(2)} of compute on record.\n`);
+  if (days < 28) {
+    console.error('  ⓘ Fewer days than you expected? Claude Code keeps only the last ~30 days of');
+    console.error('    logs by default, so this is capped by retention, not your real history.');
+    console.error('    • Going forward you need do nothing — the daily auto-submit banks each new');
+    console.error('      day before it is pruned, so the union keeps your full history from here.');
+    console.error('    • Want a bigger starting history? Raise cleanupPeriodDays in');
+    console.error('      ~/.claude/settings.json (e.g. 3650). Affects future logs only.\n');
+  }
   console.error('  This is EVERYTHING that would be sent (latest day shown, all days identical in shape):\n');
   console.log(JSON.stringify(payloads[payloads.length - 1], null, 2));
   console.error('\n  Counters and fixed-vocabulary names only. No prompts, no paths, no repo names —');
