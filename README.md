@@ -18,7 +18,7 @@ Counters never content · every byte previewed before consent · 50% of every co
 
 ---
 
-Every AI coding tool you run writes usage logs to your own disk — and most of them also ship
+Your AI coding tools already write usage logs to your own disk — and most of them also ship
 that telemetry home, where it gets aggregated and sold as market intelligence to investors,
 competitors, and analysts. **You generate the data. You were never offered a cut.**
 
