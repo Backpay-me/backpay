@@ -1,6 +1,6 @@
 {
   "name": "backpay",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "backpay — your AI usage stats, on your terms. counters never content, preview before consent, 50% back.",
   "bin": { "backpay": "./collect.js" },
   "files": ["collect.js", "README.md"],
