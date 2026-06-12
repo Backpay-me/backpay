@@ -91,7 +91,7 @@ A payload that tried to carry your prompt has nowhere to put it.
 > iv. **The ledger is public from day zero.** Half of every euro, pro-rata by days
 > contributed — or this is just another harvester with better fonts.
 >
-> v. **Paid in money nobody can freeze.** Default payout rail: Lightning.
+> v. **Paid in money nobody can freeze.** Default payout rail: Bitcoin Lightning.
 
 ## Commands
 
@@ -110,8 +110,8 @@ Buyers (vendors, VCs, funds) license k-anonymous aggregates — the usage-side i
 spend-side data like Ramp's can't see. **50% of every contract** accrues to members,
 pro-rata by data-days contributed in the contract period. Your balance is visible via
 `status` from day one, *before* the first contract closes — so you can verify the math
-while it's still small enough to check by hand. Default payout rail: a Lightning address
-you control.
+while it's still small enough to check by hand. Default payout rail: a Bitcoin Lightning
+address you control.
 
 ## FAQ
 
