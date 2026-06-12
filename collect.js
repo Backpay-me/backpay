@@ -166,7 +166,9 @@ function cronInstalled() {
 
 function installCron() {
   const self = path.resolve(__filename);
-  const line = `23 6 * * * node ${self} submit >> ${CONFIG_DIR}/meter.log 2>&1 ${CRON_TAG}`;
+  // --all = self-healing: each run re-sends every day still on disk, so days missed
+  // while the machine was asleep get caught up (server dedups) instead of lost.
+  const line = `23 6 * * * node ${self} submit --all >> ${CONFIG_DIR}/meter.log 2>&1 ${CRON_TAG}`;
   let current = '';
   try { current = execSync('crontab -l 2>/dev/null', { encoding: 'utf8' }); } catch {}
   if (current.includes(CRON_TAG)) return false;
