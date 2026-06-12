@@ -138,6 +138,12 @@ that pays you. Different layer.
 The same people who pay for spend-side indexes today. Spend tells you who paid; usage
 tells you who *stayed*. That retention layer is currently unclaimed.
 
+**Doesn't OpenRouter already publish usage data?**
+OpenRouter ranks *models* through its own gateway — but Claude Code, Cursor and Copilot call
+their providers directly and never touch it, so it can't see the *tool* war. Backpay measures
+tools from each dev's local logs, across every tool, plus the switching and churn no single
+gateway can. Different layer — and OpenRouter pays the devs nothing.
+
 **50% of zero is zero.**
 Correct — today the ledger reads €0.00 and the homepage says so. The data union exists before
 the first contract; that's what founding weight is for.
