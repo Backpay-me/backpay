@@ -23,7 +23,7 @@ that telemetry home, where it gets aggregated and sold as market intelligence to
 competitors, and analysts. **You generate the data. You were never offered a cut.**
 
 Backpay inverts it. You run a tiny open-source meter that reads those *local* logs, submits
-day-level **counters only**, and the union sells k-anonymous aggregates — the live index of
+day-level **counters only**, and the data union sells k-anonymous aggregates — the live index of
 which AI tools are actually winning. **Half of every euro flows back to members, pro-rata by
 days contributed.**
 
@@ -104,20 +104,6 @@ A payload that tried to carry your prompt has nowhere to put it.
 | `npx backpay export <file>` | write your payloads to a JSON file |
 | `npx backpay stop` | **leave.** removes the cron line + local config. one command |
 
-## Keep your full history
-
-The meter can only read logs still on your disk. Claude Code auto-deletes transcripts older
-than **30 days** by default (`cleanupPeriodDays`), so without this your days silently vanish
-before the daily run records them — and deleted days are unrecoverable. Raise it once, per
-machine (non-destructive — merges into your existing settings):
-
-```bash
-node -e 'const f=require("os").homedir()+"/.claude/settings.json",fs=require("fs");const j=fs.existsSync(f)?JSON.parse(fs.readFileSync(f,"utf8")):{};j.cleanupPeriodDays=3650;fs.writeFileSync(f,JSON.stringify(j,null,2));console.log("set cleanupPeriodDays=3650 →",f)'
-```
-
-This protects your *future* days; it can't bring back history already deleted, and it pays
-nothing for days before you joined.
-
 ## How you get paid
 
 Buyers (vendors, VCs, funds) license k-anonymous aggregates — the usage-side index that
@@ -143,7 +129,7 @@ The same people who pay for spend-side indexes today. Spend tells you who paid; 
 tells you who *stayed*. That retention layer is currently unclaimed.
 
 **50% of zero is zero.**
-Correct — today the ledger reads €0.00 and the homepage says so. The union exists before
+Correct — today the ledger reads €0.00 and the homepage says so. The data union exists before
 the first contract; that's what founding weight is for.
 
 **What about Cursor?**

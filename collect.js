@@ -250,7 +250,7 @@ async function init() {
     console.error('  ⓘ Fewer days than you expected? Claude Code keeps only the last ~30 days of');
     console.error('    logs by default, so this is capped by retention, not your real history.');
     console.error('    • Going forward you need do nothing — the daily auto-submit banks each new');
-    console.error('      day before it is pruned, so the union keeps your full history from here.');
+    console.error('      day before it is pruned, so the data union keeps your full history from here.');
     console.error('    • Want a bigger starting history? Raise cleanupPeriodDays in');
     console.error('      ~/.claude/settings.json (e.g. 3650). Affects future logs only.\n');
   }
@@ -259,7 +259,7 @@ async function init() {
   console.error('\n  Counters and fixed-vocabulary names only. No prompts, no paths, no repo names —');
   console.error('  the schema has no field for them. Full contract: docs/SCHEMA.md\n');
 
-  const yn = await ask(`  Join the union and submit these ${days} day(s)? [y/N] `);
+  const yn = await ask(`  Join the data union and submit these ${days} day(s)? [y/N] `);
   if (yn.toLowerCase() !== 'y') { console.error('  Nothing sent. The preview is always free.'); return; }
 
   let lastResp = null;
