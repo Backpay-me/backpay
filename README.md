@@ -104,6 +104,20 @@ A payload that tried to carry your prompt has nowhere to put it.
 | `npx backpay export <file>` | write your payloads to a JSON file |
 | `npx backpay stop` | **leave.** removes the cron line + local config. one command |
 
+## Keep your full history
+
+The meter can only read logs still on your disk. Claude Code auto-deletes transcripts older
+than **30 days** by default (`cleanupPeriodDays`), so without this your days silently vanish
+before the daily run records them — and deleted days are unrecoverable. Raise it once, per
+machine (non-destructive — merges into your existing settings):
+
+```bash
+node -e 'const f=require("os").homedir()+"/.claude/settings.json",fs=require("fs");const j=fs.existsSync(f)?JSON.parse(fs.readFileSync(f,"utf8")):{};j.cleanupPeriodDays=3650;fs.writeFileSync(f,JSON.stringify(j,null,2));console.log("set cleanupPeriodDays=3650 →",f)'
+```
+
+This protects your *future* days; it can't bring back history already deleted, and it pays
+nothing for days before you joined.
+
 ## How you get paid
 
 Buyers (vendors, VCs, funds) license k-anonymous aggregates — the usage-side index that
@@ -131,6 +145,13 @@ tells you who *stayed*. That retention layer is currently unclaimed.
 **50% of zero is zero.**
 Correct — today the ledger reads €0.00 and the homepage says so. The data union exists before
 the first contract; that's what founding weight is for.
+
+**What stops someone running 100 fake members to game the 50%?**
+Nothing at the accrual layer — and that's fine, because the gate is at *payout*, not accrual.
+When money actually moves, claiming it binds to a real identity (GitHub OAuth) so one human =
+one payout; sock-puppets accrue nothing they can cash out. The pool itself is auditable
+on-chain. None of this is built before the first contract — accrual stays open and honest
+until then.
 
 **What about Cursor?**
 No clean local usage log (token data is buried in binary blobs). CLI agents first;
