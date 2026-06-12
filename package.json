@@ -1,0 +1,12 @@
+{
+  "name": "backpay",
+  "version": "0.0.1",
+  "description": "backpay — your AI usage stats, on your terms. counters never content, preview before consent, 50% back.",
+  "bin": { "backpay": "./collect.js" },
+  "files": ["collect.js", "README.md"],
+  "engines": { "node": ">=18" },
+  "homepage": "https://backpay.me",
+  "repository": { "type": "git", "url": "git+https://github.com/Backpay-me/backpay.git" },
+  "bugs": { "url": "https://github.com/Backpay-me/backpay/issues" },
+  "license": "MIT"
+}
