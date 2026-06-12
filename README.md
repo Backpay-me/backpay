@@ -2,7 +2,7 @@
 
 # ⏚ BACKPAY
 
-### My AI tools logged **$1,556** of my usage. I was paid **$0**.
+### My AI tools logged every dollar of my usage. I was paid **$0**.
 
 **The open-source data union for AI dev tools.**
 Counters never content · every byte previewed before consent · 50% of every contract back to members.
